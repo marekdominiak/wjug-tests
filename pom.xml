@@ -60,6 +60,11 @@
             <version>5.0.0-M2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.testng</groupId>
