@@ -9,6 +9,6 @@ public abstract class AbstractPersonTest {
 
     @BeforeMethod
     public void setupAbs() {
-        birthDate = Instant.parse("2007-12-03T10:15:30.00Z");
+        birthDate = Instant.parse("1992-12-03T10:15:30.00Z");
     }
 }
