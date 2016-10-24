@@ -29,6 +29,7 @@ public class SameCalculatorTest {
     @Test
     public void shouldAddNumbersCorrectly() throws Exception {
         Calculator calc = new Calculator();
+
         Assertions.assertThat(calc.add(2, 2)).isEqualTo(4);
     }
 }

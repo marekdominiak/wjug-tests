@@ -30,10 +30,13 @@ public class FuzzyCalculatorTest {
 
     @Test
     public void shouldAddNumbersCorrectly() throws Exception {
+        // given
         Calculator calc = new Calculator();
 
+        // when
         int sum = calc.add(numberA, numberB);
 
+        //then
         Assertions.assertThat(sum).isEqualTo(numberA + numberB);
     }
 }

@@ -13,9 +13,6 @@ public class FakeClock extends Clock {
         this.zone = zone;
     }
 
-    public void setInstant(Instant instant) {
-        this.instant = instant;
-    }
 
     @Override
     public long millis() {

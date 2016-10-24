@@ -54,6 +54,7 @@ public class PersonTest extends BasePersonTest {
                 .isBetween(THRESHOLD_1, maxInstant);
     }
 
+
     @Test
     public void emptyMethodJustToMakeThingsHarder6() throws Exception {
 
@@ -66,14 +67,12 @@ public class PersonTest extends BasePersonTest {
 
     }
 
-    @Test
-    public void defaultPersonShouldBeBornOnAParticularDate() throws Exception {
-        Instant expectedBirthDate = Instant.parse("1986-12-03T10:15:30.00Z");
-        Person person = newPerson();
-        Instant birthDate = person.getBirthDate();
-
-        Assertions.assertThat(birthDate)
-                .isEqualTo(expectedBirthDate);
-    }
-
+    //    @Test
+//    public void defaultPersonShouldBeInHis20s() throws Exception {
+//        Person person = new Person(Instant.parse("2007-12-03T10:15:30.00Z"));
+//
+//        Assertions.assertThat(person.getBirthDate())
+//                .isBetween(Instant.parse("1986-12-03T10:15:30.00Z"),
+//                        Instant.parse("1996-12-03T10:15:30.00Z"));
+//    }
 }
