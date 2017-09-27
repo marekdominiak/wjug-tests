@@ -5,9 +5,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Instant;
+import java.time.LocalDate;
 
 public class PersonTest extends BasePersonTest {
-    private static final Instant THRESHOLD_1 = Instant.parse("1986-12-03T10:15:30.00Z");
+    private static final LocalDate THRESHOLD_1 = LocalDate.parse("1986-12-03");
 
     @BeforeMethod
     public void setUp() throws Exception {
@@ -47,11 +48,12 @@ public class PersonTest extends BasePersonTest {
 
     @Test
     public void defaultPersonShouldBeInHis20s() throws Exception {
-        Instant maxInstant = maxInstant();
+        LocalDate upperThreshold = maxInstant();
         Person person = newPerson();
 
         Assertions.assertThat(person.getBirthDate())
-                .isBetween(THRESHOLD_1, maxInstant);
+                .isAfterOrEqualTo(THRESHOLD_1)
+                .isBeforeOrEqualTo(upperThreshold);
     }
 
 

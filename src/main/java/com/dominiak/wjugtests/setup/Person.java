@@ -1,20 +1,15 @@
 package com.dominiak.wjugtests.setup;
 
-import java.time.Instant;
-
+import java.time.LocalDate;
 
 public class Person {
-    private Instant birthDate;
+    private LocalDate birthDate;
 
-    public Person(Instant birthDate) {
+    public Person(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
-    public Person() {
-
-    }
-
-    public Instant getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 }

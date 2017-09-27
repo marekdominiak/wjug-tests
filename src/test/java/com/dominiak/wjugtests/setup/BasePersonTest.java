@@ -1,6 +1,7 @@
 package com.dominiak.wjugtests.setup;
 
 import java.time.Instant;
+import java.time.LocalDate;
 
 public class BasePersonTest extends AbstractPersonTest {
 
@@ -13,7 +14,7 @@ public class BasePersonTest extends AbstractPersonTest {
         return new Person(birthDate);
     }
 
-    protected Instant maxInstant() {
-        return Instant.parse("1996-12-03T10:15:30.00Z");
+    protected LocalDate maxInstant() {
+        return LocalDate.parse("1996-12-03");
     }
 }

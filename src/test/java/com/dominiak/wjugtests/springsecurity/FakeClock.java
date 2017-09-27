@@ -13,7 +13,6 @@ public class FakeClock extends Clock {
         this.zone = zone;
     }
 
-
     @Override
     public long millis() {
         return instant.toEpochMilli();

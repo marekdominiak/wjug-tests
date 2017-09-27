@@ -8,7 +8,7 @@ public class RemoveLoopsTest {
     @Test
     public void testName() throws Exception {
 
-
+        // spock example and how junit 5 solves this
     }
 
 }

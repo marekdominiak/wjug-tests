@@ -12,6 +12,6 @@ public class CalculatorTest {
     public void shouldAddNumbersProperly() throws Exception {
         Calculator calculator = new Calculator();
 
-        Assertions.assertThat(calculator.sum(2, 3));
+        assertThat(calculator.sum(2, 3) == 5);
     }
 }

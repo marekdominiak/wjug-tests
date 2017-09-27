@@ -9,7 +9,6 @@ public class AssertThrowsTest {
     public void oldGoodWay() throws Exception {
         // given
         String name = null;
-
         try {
             // when
             safeBusinessMethod(name);
@@ -33,7 +32,6 @@ public class AssertThrowsTest {
         // given
         setup();
         String name = null;
-
         //when
         businessMethod2(name);
     }

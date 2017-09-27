@@ -3,12 +3,13 @@ package com.dominiak.wjugtests.setup;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Instant;
+import java.time.LocalDate;
 
 public abstract class AbstractPersonTest {
-    protected Instant birthDate;
+    protected LocalDate birthDate;
 
     @BeforeMethod
     public void setupAbs() {
-        birthDate = Instant.parse("1992-12-03T10:15:30.00Z");
+        birthDate = LocalDate.parse("1992-12-03");
     }
 }
