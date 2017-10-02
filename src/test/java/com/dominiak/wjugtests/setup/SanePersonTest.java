@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import java.time.Instant;
 import java.time.LocalDate;
 
+import static java.time.LocalDate.parse;
+
 public class SanePersonTest extends BasePersonTest {
 
     @Test
@@ -39,11 +41,15 @@ public class SanePersonTest extends BasePersonTest {
     }
 
     @Test
-    public void defaultPersonShouldBeInHis20s() throws Exception {
-        Person person = new Person(LocalDate.parse("1992-12-03"));
+    public void personShouldBeBornIn90s() throws Exception {
+        Person person = new Person(date("1992-12-03"));
 
         Assertions.assertThat(person.getBirthDate())
-                .isAfter(LocalDate.parse("1986-12-03"))
-                .isBefore(LocalDate.parse("1996-12-03"));
+                .isAfterOrEqualTo(date("1990-01-01"))
+                .isBefore(date("2000-01-01"));
+    }
+
+    private LocalDate date(String text) {
+        return parse(text);
     }
 }

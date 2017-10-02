@@ -14,7 +14,7 @@ public class BasePersonTest extends AbstractPersonTest {
         return new Person(birthDate);
     }
 
-    protected LocalDate maxInstant() {
-        return LocalDate.parse("1996-12-03");
+    protected LocalDate upperThreshold() {
+        return LocalDate.parse("2000-01-01");
     }
 }

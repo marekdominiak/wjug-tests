@@ -61,7 +61,7 @@ public class SessionRegistryImplTests {
 
 		Thread.sleep(1000);
 
-		// Update request date/time
+		// Update request upperThreshold/time
 		sessionRegistry.refreshLastRequest(sessionId);
 
 		Date retrieved = sessionRegistry.getSessionInformation(sessionId)
@@ -102,7 +102,7 @@ public class SessionRegistryImplTests {
 
 		clock.sleep(1000);
 
-		// Update request date/time
+		// Update request upperThreshold/time
 		sessionRegistry.refreshLastRequest(sessionId);
 
 		Date retrieved = sessionRegistry.getSessionInformation(sessionId)
